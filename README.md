@@ -12,6 +12,8 @@ Please cite this work if you make use of our system in any of your own endeavors
 
 ## 1.1. Ubuntu ##
 
+recently tested on Ubuntu 18.04, Cuda 10.1, RTX 2080ti
+
 * Ubuntu 14.04, 15.04 or 16.04 (Though many other linux distros will work fine)
 * CMake
 * OpenGL
@@ -56,6 +58,16 @@ Finally, build Core and GUI.
 Yes, if you run the *build.sh* script on a fresh clean install of Ubuntu 14.04, 15.04, or 16.04, enter your password for sudo a few times and wait a few minutes all dependencies will get downloaded and installed and it should build everything correctly. This has not been tested on anything but fresh installs, so I would advise using it with caution if you already have some of the dependencies installed.
 
 # 3. Installation issues #
+
+*** `cuda issue (Error: invalid texture reference:)` ***
+* do this: https://github.com/mp3guy/ElasticFusion/issues/193#issuecomment-53322202 then 
+```
+rm -rf build && mkdir build && cd build && cmake ../src/ && make -j20
+```
+*** when you see warnings `your GPU isn't in the ICP/RGB/SO3`, please add it
+* follow steps here before compiling `GPUTest` https://www.programmersought.com/article/40901771788/
+
+
 
 ***`#include <Eigen/Core>` not found***
 

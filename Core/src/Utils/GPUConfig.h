@@ -65,6 +65,11 @@ class GPUConfig
 
             std::string dev(prop.name);
 
+            icpStepMap["GeForce RTX 2080 Ti"] = std::pair<int, int>(128, 128);
+            rgbStepMap["GeForce RTX 2080 Ti"] = std::pair<int, int>(96, 128);
+            rgbResMap["GeForce RTX 2080 Ti"] = std::pair<int, int>(128, 304);
+            so3StepMap["GeForce RTX 2080 Ti"] = std::pair<int, int>(96, 112);
+
             icpStepMap["GeForce GTX 780 Ti"] = std::pair<int, int>(128, 112);
             rgbStepMap["GeForce GTX 780 Ti"] = std::pair<int, int>(128, 112);
             rgbResMap["GeForce GTX 780 Ti"] = std::pair<int, int>(256, 336);
