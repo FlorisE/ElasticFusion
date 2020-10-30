@@ -123,6 +123,10 @@ The GUI (*ElasticFusion*) can take a bunch of parameters when launching it from 
 
 Essentially by default *./ElasticFusion* will try run off an attached ASUS sensor live. You can provide a .klg log file instead with the -l parameter. You can capture .klg format logs using either [Logger1](https://github.com/mp3guy/Logger1) or [Logger2](https://github.com/mp3guy/Logger2). 
 
+
+```$ sudo ./ElasticFusion -l $HOME/png_to_klg/02/02.klg```
+
+
 # 5. How do I just use the Core API? #
 The libefusion.so shared library which gets built by the Core is what you want to link against.
 
