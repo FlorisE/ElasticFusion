@@ -160,6 +160,22 @@ int main(int argc, char * argv[])
         directory.append("/");
     }
 
+    int nDevices;
+
+    cudaError_t cudaResultCode = cudaGetDeviceCount(&nDevices);
+
+    if (cudaResultCode != cudaSuccess)
+    {
+        std::cout << "CUDA error occured: " << cudaResultCode << std::endl;
+	return 1;
+    }
+
+    if (nDevices == 0)
+    {
+        std::cout << "No CUDA devices detected." << std::endl;
+	return 1;
+    }
+
     pangolin::CreateWindowAndBind("GPUTest", 640, 480);
     pangolin::Display("Image").SetAspect(640.0f / 480.0f);
 
